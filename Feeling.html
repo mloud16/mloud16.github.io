@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Are You Feeling?</title>
+    <style>
+        :root {
+            --text: #1f1500;
+            --background: #f4d7f4;
+            --primary: #de21c2;
+            --secondary: #eb7ae4;
+            --accent: #dc6ac0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--background);
+            color: var(--text);
+        }
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--secondary);
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .feelings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .feeling-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+            text-align: center;
+            border: 2px solid var(--accent);
+        }
+        .feeling-box:hover {
+            transform: scale(1.05);
+            background: var(--secondary);
+            color: white;
+        }
+        .info-section {
+            display: none;
+            background: white;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--primary);
+        }
+        .back-btn {
+            margin-top: 10px;
+            background: var(--accent);
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back-btn:hover {
+            background: var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>How Are You Feeling?</h1>
+    <p>Select a feeling to get support, tips, and helpful resources.</p>
+</header>
+
+<div class="container">
+    <div class="feelings-grid" id="grid">
+        <div class="feeling-box" onclick="showInfo('anxious')">Anxious</div>
+        <div class="feeling-box" onclick="showInfo('sad')">Sad</div>
+        <div class="feeling-box" onclick="showInfo('overwhelmed')">Overwhelmed</div>
+        <div class="feeling-box" onclick="showInfo('angry')">Angry</div>
+        <div class="feeling-box" onclick="showInfo('lonely')">Lonely</div>
+        <div class="feeling-box" onclick="showInfo('unmotivated')">Unmotivated</div>
+    </div>
+
+    <div id="anxious" class="info-section">
+        <h2>Feeling Anxious</h2>
+        <p>Anxiety can feel overwhelming, but you're not alone. It's your body's response to stress or uncertainty.</p>
+        <h3>Tips:</h3>
+        <ul>
+            <li>Practice slow, deep breathing.</li>
+            <li>Try grounding techniques (5-4-3-2-1 method).</li>
+            <li>Talk to someone you trust.</li>
+        </ul>
+        <h3>Resources:</h3>
+        <ul>
+            <li>Calm App</li>
+            <li>Anxiety & Depression Association of America (ADAA)</li>
+        </ul>
+        <button class="back-btn" onclick="goBack()">Back</button>
+    </div>
+
+    <div id="sad" class="info-section">
+        <h2>Feeling Sad</h2>
+        <p>Sadness is a normal human emotion. It can be triggered by many things, and it's okay to feel this way.</p>
+        <h3>Tips:</h3>
+        <ul>
+            <li>Write down your thoughts.</li>
+            <li>Put on calming or uplifting music.</li>
+            <li>Reach out to a friend.</li>
+        </ul>
+        <h3>Resources:</h3>
+        <ul>
+            <li>BetterHelp</li>
+            <li>Mental Health America</li>
+        </ul>
+        <button class="back-btn" onclick="goBack()">Back</button>
+    </div>
+
+    <div id="overwhelmed" class="info-section">
+        <h2>Feeling Overwhelmed</h2>
+        <p>When life feels like too much, your brain may struggle to process everything at once.</p>
+        <h3>Tips:</h3>
+        <ul>
+            <li>Break tasks into small steps.</li>
+            <li>Take a short walk or get fresh air.</li>
+            <li>Give yourself permission to pause.</li>
+        </ul>
+        <h3>Resources:</h3>
+        <ul>
+            <li>Headspace</li>
+        </ul>
+        <button class="back-btn" onclick="goBack()">Back</button>
+    </div>
+    <div id="angry" class="info-section">
+        <h2>Feeling Angry</h2>
+        <p>Anger is a natural emotion that can signal when something is wrong or unfair.</p>
+        <h3>Tips:</h3>
+        <ul>
+            <li>Count to ten before reacting.</li>
+            <li>Engage in physical activity.</li>
+            <li>Practice relaxation techniques.</li>
+        </ul>
+        <h3>Resources:</h3>
+        <ul>
+            <li>Anger Management Techniques - Mayo Clinic</li>
+        </ul>
+        <button class="back-btn" onclick="goBack()">Back</button>
+</div>
+
+<script>
+function showInfo(id) {
+    document.getElementById('grid').style.display = 'none';
+    document.getElementById(id).style.display = 'block';
+}
+
+function goBack() {
+    const sections = document.querySelectorAll('.info-section');
+    sections.forEach(sec => sec.style.display = 'none');
+    document.getElementById('grid').style.display = 'grid';
+}
+</script>
+
+<!-- aesthetic enhancements added -->
+</body>
+</html>

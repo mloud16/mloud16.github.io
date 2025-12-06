@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Share Your Story</title>
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #f8f5ff;
+            color: #4a3a6a;
+            margin: 0;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        p.tagline {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .container {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .form-section, .blog-section {
+            background: #ffffffcc;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(141, 121, 226, 0.25);
+            width: 450px;
+        }
+
+        .form-section h2, .blog-section h2 {
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border-radius: 10px;
+            border: 1px solid #d5c9ff;
+            background: #faf7ff;
+        }
+
+        textarea {
+            height: 130px;
+            resize: vertical;
+        }
+
+        .checkbox-area {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 15px;
+            background: #c7b3ff;
+            border: none;
+            color: white;
+            font-size: 1.1rem;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #b7a4ff;
+        }
+
+        .story-card {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+        }
+
+        .story-card h3 {
+            margin: 0 0 10px;
+        }
+
+        .story-card p {
+            margin: 0;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Share Your Story</h1>
+<p class="tagline">Your voice matters. Share what you've been through, inspire others, and feel understood.</p>
+
+<div class="container">
+
+    <!-- Submission Form -->
+    <div class="form-section">
+        <h2>Submit Your Story</h2>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your name..." />
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Your email..." />
+
+            <label for="story">Your Story</label>
+            <textarea id="story" placeholder="Share your thoughts..."></textarea>
+
+            <div class="checkbox-area">
+                <input type="checkbox" id="anon" />
+                <label for="anon">I'd like to remain anonymous</label>
+            </div>
+
+            <button type="submit">Send Story</button>
+        </form>
+    </div>
+
+    <!-- Blog Section -->
+    <div class="blog-section">
+        <h2>Community Stories</h2>
+
+        <div class="story-card">
+            <h3>Anonymous</h3>
+            <p>“I didn't know how much I was holding in until I finally talked to someone. Every day gets a little easier when you let others in.”</p>
+        </div>
+
+        <div class="story-card">
+            <h3>Jordan</h3>
+            <p>“Mental health is a journey, not a straight line. I hope my story helps someone realize they're not alone.”</p>
+        </div>
+
+        <div class="story-card">
+            <h3>Riley</h3>
+            <p>“Im 29 and ive been dealing with my mental health journey for a while now. I feel like my family and friends dont understand what im
+                going through so its nice to have a place to share and build community with others. Reaching out for help was the hardest part, but 
+                also the most important step I ever took.”</p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Share Your Story</title>
+
+    <style>
+        /* PAGE BACKGROUND */
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #f4d7f4; /* Pink background */
+            color: #1f1500; /* Dark brown text */
+            margin: 0;
+            padding: 40px;
+        }
+
+        /* NAVIGATION BAR */
+        nav {
+            background-color: #f4d7f4;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        nav a {
+            background-color: #de21c2;
+            color: white;
+            padding: 8px 12px;
+            margin: 6px;
+            text-decoration: none;
+            border-radius: 10px;
+            box-shadow: 0 3px 7px rgba(222, 33, 194, 0.35);
+        }
+
+        nav a:hover {
+            background-color: #eb7ae4;
+        }
+
+        /* HEADER TEXT */
+        h1 {
+            text-align: center;
+            font-size: 2.8rem;
+            color: #de21c2;
+            text-shadow: 1px 1px 3px rgba(222, 33, 194, 0.3);
+            margin-bottom: 10px;
+        }
+
+        p.tagline {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        /* PAGE LAYOUT */
+        .container {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* FORM + BLOG CARD SECTIONS */
+        .form-section, .blog-section {
+            background: #fde8f9; /* Light bubblegum card pink */
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(222, 33, 194, 0.25);
+            width: 450px;
+        }
+
+        .form-section h2, .blog-section h2 {
+            margin-top: 0;
+            font-size: 1.8rem;
+            color: #de21c2;
+        }
+
+        /* FORM FIELDS */
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border-radius: 10px;
+            border: 2px solid #eb7ae4;
+            background: #ffffff;
+        }
+
+        textarea {
+            height: 130px;
+            resize: vertical;
+        }
+
+        .checkbox-area {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* SUBMIT BUTTON */
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 15px;
+            background: #de21c2;
+            border: none;
+            color: white;
+            font-size: 1.1rem;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 3px 7px rgba(222, 33, 194, 0.35);
+        }
+
+        button:hover {
+            background: #eb7ae4;
+        }
+
+        /* BLOG / COMMUNITY STORIES */
+        .story-card {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 10px rgba(222, 33, 194, 0.15);
+        }
+
+        .story-card h3 {
+            margin: 0 0 10px;
+            color: #de21c2;
+        }
+
+        .story-card p {
+            margin: 0;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+        <a href="index.html">Home</a>
+        <a href="Feeling.html">How are you feeling?</a>
+        <a href="Friend.html">How do I help a friend?</a>
+        <a href="Not Alone.html">You're not alone</a>
+        <a href="About.html">About me</a> 
+        <a href="Resources.html">Help/Resources</a>
+   
+</nav>
+
+<h1>Share Your Story</h1>
+<p class="tagline">Your voice matters. Share what you've been through, inspire others, and feel understood.</p>
+
+<div class="container">
+
+    <!-- Submission Form -->
+    <div class="form-section">
+        <h2>Submit Your Story</h2>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your name..." />
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Your email..." />
+
+            <label for="story">Your Story</label>
+            <textarea id="story" placeholder="Share your thoughts..."></textarea>
+
+            <div class="checkbox-area">
+                <input type="checkbox" id="anon" />
+                <label for="anon">I'd like to remain anonymous</label>
+            </div>
+
+            <button type="submit">Send Story</button>
+        </form>
+    </div>
+
+    <!-- Blog Section -->
+    <div class="blog-section">
+        <h2>Community Stories</h2>
+
+        <div class="story-card">
+            <h3>Anonymous</h3>
+            <p>“I didn't know how much I was holding in until I finally talked to someone. Every day gets a little easier when you let others in.”</p>
+        </div>
+
+        <div class="story-card">
+            <h3>Jordan</h3>
+            <p>“Mental health is a journey, not a straight line. I hope my story helps someone realize they're not alone.”</p>
+        </div>
+
+        <div class="story-card">
+            <h3>Riley</h3>
+            <p>“I'm 29 and I've been dealing with my mental health journey for a while now. I feel like my family and friends don't understand what I'm going through, so it's nice to have a place to share and build community with others.”</p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
